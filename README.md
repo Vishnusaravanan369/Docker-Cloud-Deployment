@@ -23,20 +23,23 @@ This project demonstrates containerizing front-end applications and deploying th
 
 ## Steps to Deploy
 1. Clone the repository:
-  git clone https://github.com/<your-username>/docker-cloud-deployment.git
+```bash
+git clone https://github.com/<your-username>/docker-cloud-deployment.git
+2.Build Docker image:
 
-3. Build Docker image:
-  docker build -t <image-name>:<tag> .
+docker build -t <image-name>:<tag> .
 
 3.Run container:
-  docker run -d -p 80:80 <image-name>:<tag>
-  
+
+docker run -d -p 80:80 <image-name>:<tag>
+
 4.Verify deployment by visiting your EC2 instance public IP in the browser.
 
 5.Push image to Docker Hub:
-  docker login
-  docker tag <image-name>:<tag> <dockerhub-username>/<image-name>:<tag>
-  docker push <dockerhub-username>/<image-name>:<tag>
+
+docker login
+docker tag <image-name>:<tag> <dockerhub-username>/<image-name>:<tag>
+docker push <dockerhub-username>/<image-name>:<tag>
 
 
    
